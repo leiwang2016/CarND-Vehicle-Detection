@@ -12,12 +12,15 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 [image1]: ./result/car_vs_nocar.png
 [image2]: ./result/hog_example.png
-[image3]: ./examples/sliding_windows.jpg
+[image3.1]: ./result/sliding_windows_1.jpg
+[image3.2]: ./result/sliding_windows_2.jpg
+[image3.3]: ./result/sliding_windows_3.jpg
+[image3.4]: ./result/sliding_windows_4.jpg
 [image4]: ./result/output_boxes.png
-[image5]: ./examples/bboxes_and_heat.png
+[image5]: ./result/bboxes_and_heat.png
 [image6]: ./examples/labels_map.png
 [image7]: ./result/output_boxes.png
-[video1]: ./project_video.mp4
+[video1]: ./project_video_out.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.
@@ -60,7 +63,10 @@ I trained a linear SVM using...
 
 I decided to search random window positions at random scales all over the image and came up with this (ok just kidding I didn't actually ;):
 
-![alt text][image3]
+![alt text][image3.1]
+![alt text][image3.2]
+![alt text][image3.3]
+![alt text][image3.4]
 
 #### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
