@@ -12,10 +12,10 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 [image1]: ./result/car_vs_nocar.png
 [image2]: ./result/hog_example.png
-[image3.1]: ./result/sliding_windows_1.jpg
-[image3.2]: ./result/sliding_windows_2.jpg
-[image3.3]: ./result/sliding_windows_3.jpg
-[image3.4]: ./result/sliding_windows_4.jpg
+[image3.1]: ./result/sliding_windows_1.png
+[image3.2]: ./result/sliding_windows_2.png
+[image3.3]: ./result/sliding_windows_3.png
+[image3.4]: ./result/sliding_windows_4.png
 [image4]: ./result/output_boxes.png
 [image5]: ./result/bboxes_and_heat.png
 [image6]: ./result/grey_output_boxes.png
@@ -102,6 +102,11 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 ### Discussion
 
-#### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+#### Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.
+In this project, I build classifier using HOG features. Using SVM classifier, I was able to get about 98% accuracy. However, looking at output videos, we can see that there is still some inaccuracies happening. For example, sometimes the classifier will label tree/road side as vehicle. Since both training and test set gives about similar accuracy, this is likely due to underfitting. In the future, I can try to add in color features in the classifier.
+
+Another challenge I got building the classifier is the output bounding boxes sometimes only selects a part of the vehicle. So it doesn't give as accurate location information for the vehicle. This could be an issue when implementing the pipeline in real life self-driving car, where accurate location information is critical. Since the searching algorithm does not reward/penalize bounding box location accuracy, this is one big limitation in this algorithm. In the future, 
+I would like to try implementing an algorithm with multi-dimensional output, including both classifier output and bounding box locations.
+
+One additional limitation is the speed of inference. Since the algorithm involves searching for multiple bounding boxes sequentially for each frame, this makes it infeasible to do real-time self-driving. An algorithm that allows searching for multiple bounding boxes at the same time will help speed up the inference process.
