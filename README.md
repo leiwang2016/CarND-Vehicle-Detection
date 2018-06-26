@@ -63,7 +63,7 @@ I chose to use linear SVM since it gives the best test accuracy and fastest trai
 
 #### 1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
 
-I used sliding
+I used varying sizes of sliding window from 1 to 3 scales, searching on the lower half of frames since this is more likely to contain cars.
 
 ![alt text][image3.1]
 ![alt text][image3.2]
@@ -72,9 +72,10 @@ I used sliding
 
 #### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
-Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
+Ultimately I searched on two scales using LUV 3 channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result, with 98% accuracy on test set.  Here are some example images:
 
 ![alt text][image4]
+
 ---
 
 ### Video Implementation
@@ -96,7 +97,6 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 ### Here the resulting bounding boxes are drawn onto the last frame in the series:
 ![alt text][image7]
-
 
 ---
 
