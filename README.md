@@ -13,7 +13,7 @@ The goals / steps of this project are the following:
 [image1]: ./result/car_vs_nocar.png
 [image2]: ./result/hog_example.png
 [image3]: ./examples/sliding_windows.jpg
-[image4]: ./examples/sliding_window.jpg
+[image4]: ./result/output_boxes.png
 [image5]: ./examples/bboxes_and_heat.png
 [image6]: ./examples/labels_map.png
 [image7]: ./result/output_boxes.png
