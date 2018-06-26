@@ -18,8 +18,8 @@ The goals / steps of this project are the following:
 [image3.4]: ./result/sliding_windows_4.jpg
 [image4]: ./result/output_boxes.png
 [image5]: ./result/bboxes_and_heat.png
-[image6]: ./examples/labels_map.png
-[image7]: ./result/output_boxes.png
+[image6]: ./result/grey_output_boxes.png
+[image7]: ./result/frame1258.jpg
 [video1]: ./project_video_out.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
